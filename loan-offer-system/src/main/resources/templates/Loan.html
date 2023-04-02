@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+  <title>animated sinin and signup panel. animated login and registeration page, popup, - Bootsnipp.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    /*Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+*{
+    font-family:"Quicksand", sans-serif;
+    margin: 0;
+    padding:0;
+    scroll-padding-top:2rem;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    list-style:none;
+    text-decoration:none;
+}
+
+/*Variables*/
+:root{
+--text-color:#161616;
+--hover-color:hsl(0,0%,14%);
+--bg-color:#fff;
+--Btn-color:#e53935;
+}
+
+html::-webkit-scrollbar{
+width:0.5rem;
+background:#2e2e2e;}
+
+html::-webkit-scrollbar-thumb{
+width:0.5rem;
+background:#2e2e2e;}
+img{
+width:100%;
+}
+
+body{
+color:var(--text-color);
+}
+
+.main{
+overflow-x:hidden;
+}
+
+section{
+padding : 4rem 0 3rem;
+}
+
+.container{
+width:100%;
+margin:auto;
+}
+
+.heading{
+    text-align: center;
+    font-size:3.0rem;
+    background: linear-gradient(#161616,#546e7a);
+    color:transparent;
+    -webkit-background-clip:text;
+    background-clip:text;
+    margin-top:20px;
+    margin-bottom:2rem;
+    }
+
+
+ header{
+display :block;
+width:100%;
+position:fixed;
+top:0;
+left:0;
+z-index:100;
+}
+
+header .shadow{
+background: var(--bg-color);
+box-shadow: 1px 2px 4px rgb(15 54 55 / 10%);
+transition: 0.2s;
+}
+
+
+.logo img{
+width:41px;
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 0;
+
+    background: #F5F5F5;
+    padding: 3px 2% 0% 1%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius:0.4rem;
+}
+
+
+#menu-icon{
+font-size:24px;
+cursor:pointer;
+display:none;
+}
+
+.navbar{
+display:flex;
+column-gap:2rem;
+}
+
+.navbar a{
+font-size:1rem;
+font-weight:500;
+background: linear-gradient(#161616,red);
+color:transparent;
+-webkit-background-clip:text;
+background-clip:text;
+}
+
+.navbar a:hover{
+color:var(--text-color);
+}
+
+    /*Home*/
+  .home-content{
+    min-height:600px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    align-items:center;
+    gap:2rem;
+  }
+
+  .home-text h1{
+    font-size:3.4rem;
+    margin-bottom:1rem;
+  }
+
+  .home-text p{
+  margin-bottom:1rem;
+  }
+
+.Footer-img{
+width:150px;
+margin-left:80px;
+}
+
+
+.SubHeader{
+justify-content:left;
+align-items:center;
+padding:0px 150px;
+margin:20px;
+color: red;
+}
+
+.Footer{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(10px,auto));
+gap:1rem;
+background:#E0E0E0;
+}
+.Footer-box{
+display:flex;
+flex-direction:column;
+
+}
+.table{
+margin:0px 150px;
+width:50%;
+}
+.Footer-box h2{
+font-size:1.2rem;
+font-weight:600;
+margin-bottom:1rem;
+}
+.Footer-box a
+{
+    color#fff;
+    margin-bottom:4px;
+}
+
+.copyright
+{
+    text-align: center;
+    padding: 15px;
+}
+
+.logo
+{
+ width:100px;
+Height:50px;
+}
+
+@media (max-weidth:1080px)
+{
+    section
+    {
+        padding:50px 0;
+    }
+    .home-text h1
+    {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:768px)
+{
+.logo img {
+width:100px;
+}
+#menu-icon{
+display:inital;
+z-index:150;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.navbar{
+position:absolute;
+top:0;
+left:0;
+right:0;
+background:var(--bg-color);
+display:flex;
+flex-direction:column;
+text-align:center;
+box-shadow:0 5px 8px rgb(15 54 55 /10%);
+}
+.navbar a {
+display: block;
+padding:12px;
+}
+.navbar .active{
+clip-path:circle(144% at 50% 0);
+}
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {background-color: #4CAF50;} /* Green */
+</style>
+<body>
+
+<header>
+  <div class="nav container">
+    <a href="#" class="logo">
+      <img src="Image/Smart.png" alt="">
+    </a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <ul class="navbar">
+      <li><button class="btn"  onclick="Home();" >Home</button></li>
+
+      <li><button class="btn" onclick="Login();" >Login</button></li>
+    </ul>
+  </div>
+</header>
+
+<!--Main Content Container-->
+<div class="main">
+  <!--header-->
+
+  <!-- Sidebar (hidden by default) -->
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"> Home</a>
+    <a href="#Shop" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"> Shop</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="Loan">Loan <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Loan Deatails</a>
+        <a href="#" class="w3-bar-item w3-button">Get Loan</a>
+        <a href="#" class="w3-bar-item w3-button">Loan History</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#About Us" class="w3-bar-item w3-button">About Us</a>
+        <a href="#Contact Us" class="w3-bar-item w3-button">Contact Us</a>
+        <a href="#Terms And Conditions" class="w3-bar-item w3-button">Terms And Conditions</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close</a>
+  </nav>
+
+  <!-- Top menu -->
+  <div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+
+      <a href="#Login" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-right w3-padding-16"> Login</a>
+    </div>
+  </div>
+
+  <!--LOAN STATUS-->
+  <section class="loan" id="loan">
+    <h2 class="heading">Loan History</h2>
+    <div>
+      <div>
+        <h3 class="SubHeader" >Loan payment status</h3>
+      </div>
+      <br>
+      <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+          <th>Loan Description</th>
+          <th>Payment</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr>
+          <td>Loan Total Payment</td>
+          <td>LKR 15,000.00</td>
+        </tr>
+        <tr>
+          <td>Amound Paid</td>
+          <td>LKR 5000.00</td>
+        </tr>
+        <tr>
+          <td>OutStanding Amount</td>
+          <td>LKR 10,000.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <div>
+        <h3 class="SubHeader" >Due Payment</h3>
+      </div>
+      <br>
+      <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+          <th>Due Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+
+        <tr>
+          <td>11/03/2023</td>
+          <td>1st installments</td>
+          <td>LKR 5,000.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div>
+        <h3 class="SubHeader" >Next Payment</h3>
+      </div>
+      <br>
+      <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+          <th>Due Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+        </thead>
+        <tbody >
+
+        <tr>
+          <td>11/04/2023</td>
+          <td>2nd installments</td>
+          <td>LKR 5,000.00</td>
+        </tr>
+        <tr>
+          <td>11/05/2023</td>
+          <td>3rd installments</td>
+          <td>LKR 5,000.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+
+
+
+  <!--Footer-->
+  <section class="Footer container">
+    <div class="Footer-box">
+      <h2>Products</h2>
+      <a herf="#">Headphones</a>
+      <a herf="#">Earbuds</a>
+      <a herf="#">Earphone</a>
+      <a herf="#">Case</a>
+    </div>
+    <div class="Footer-box">
+      <h2>Payment</h2>
+      <a herf="#">Return Policy</a>
+      <a herf="#">Refunds Policy</a>
+      <a herf="#">Support</a>
+      <a herf="#">Terms of Use</a>
+    </div>
+    <div class="Footer-box">
+      <h2>Products</h2>
+      <a herf="#">Headphones</a>
+      <a herf="#">Earbuds</a>
+      <a herf="#">Earphone</a>
+      <a herf="#">Case</a>
+    </div>
+    <div class="Footer-box">
+      <h2>Customer Details</h2>
+      <a herf="#">Kirushanthini Arulnesan</a>
+      <a herf="#">Varothayanagar, Trinomalee</a>
+      <a herf="#">075-0044555</a>
+      <a herf="#">kiru.arul@gmail.com</a>
+    </div>
+  </section>
+
+  <div class="copyright">
+    <p>&#169; CarpoolVenom All Right Reserved.</p>
+  </div>
+</div>
+<Script>
+    let header =document.querySelector('header');
+
+    window.addEventListener('scroll',()=>{
+    header.classList.toggle('shadow',window.scrollY > 0);
+    });
+
+    let menu = document.querySelector('#menu-icon');
+    let menu = document.querySelector('#menu-icon');
+
+    menu.onclick =()=>{
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+    }
+
+
+</Script>
+<script>
+   function myFunction() {
+  var txt;
+  if (confirm("Are you Sure your selected product Add to card")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+<script>
+    function Login(){
+
+localStorage.clear();
+	window.location.href = "index.html";
+}
+function Home(){
+
+localStorage.clear();
+	window.location.href = "home.html";
+}
+</script>
+<script>
+   function PayLoan() {
+  var txt;
+  if (confirm("Are you Submit the loan payment")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+
+
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
